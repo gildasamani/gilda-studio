@@ -1,0 +1,147 @@
+Continue refining the website into a high-end cinematic creative studio experience for “Reframe Studio”.
+
+Keep the existing dark luxury color palette with deep black, warm brown, and subtle orange glow accents. Maintain the minimal premium aesthetic and cinematic atmosphere.
+
+Main hero title:
+“IMMERSIVE BY DESIGN”
+
+Keep the current subtext exactly as it is because it already fits the atmosphere perfectly.
+
+The overall feeling should be:
+- cinematic
+- atmospheric
+- modern luxury
+- immersive
+- refined
+- interactive
+- minimal but emotionally impactful
+
+The website should feel like a cinematic digital experience rather than a traditional portfolio website.
+
+IMPORTANT IMPROVEMENTS:
+
+1. Navbar Improvements
+The transparent navbar currently causes text overlap issues while scrolling.
+Create a premium glassmorphism navbar:
+- dark translucent background
+- subtle blur
+- soft border-bottom
+- smooth transition on scroll
+- maintain readability at all times
+- elegant and minimal
+
+2. Cursor Enhancements
+Keep the current custom cursor style and do NOT enlarge the cursor on links.
+
+Enhance it subtly:
+- soft cinematic orange glow
+- smooth motion interpolation
+- subtle trailing effect
+- elegant pulse animation while idle
+- refined blur/glow effect
+- premium interaction feel
+
+The cursor should feel cinematic and polished, not playful or exaggerated.
+
+3. Motion & Interaction
+Enhance the cinematic motion system:
+- smoother reveal animations
+- refined parallax scrolling
+- layered motion depth
+- subtle image zoom interactions
+- atmospheric transitions
+- elegant hover states
+- soft fade and blur transitions
+- premium easing curves
+
+Avoid flashy or aggressive animations.
+
+4. Portfolio Section Direction
+Do NOT present the work as real client portfolio projects.
+
+Transform the section into:
+“Visual Explorations”
+or
+“Concept Experiences”
+
+The projects should feel like:
+- conceptual digital studies
+- cinematic interface explorations
+- experimental visual directions
+- immersive UI concepts
+
+Avoid fake client language.
+
+Project descriptions should sound artistic and conceptual rather than commercial.
+
+5. Visual Direction
+Replace the current generic imagery with more cinematic and artistic visuals:
+- abstract atmospheric visuals
+- cinematic textures
+- monochrome or moody imagery
+- subtle grain
+- blurred light
+- premium lighting
+- futuristic minimal visuals
+- interface closeups
+- atmospheric compositions
+
+Avoid generic stock-photo aesthetics.
+
+6. Texture & Atmosphere
+Add subtle:
+- film grain
+- cinematic noise
+- light bloom
+- atmospheric blur
+- soft gradients
+- layered glow
+
+The interface should feel expensive and immersive.
+
+7. CTA & Contact Experience
+Replace the final CTA section with a more emotional cinematic presentation.
+
+Headline:
+“LET’S CREATE SOMETHING UNFORGETTABLE”
+
+Button:
+“Start a Conversation”
+
+Instead of a simple contact button, create a premium cinematic contact form experience.
+
+Form fields:
+- Name
+- Email
+- Website URL (Optional)
+- Project Type
+- Estimated Budget
+- Vision / Project Details
+
+The form should:
+- feel immersive and premium
+- include subtle glow focus states
+- use smooth transitions
+- include cinematic blur/glass effects
+- feel like part of the visual experience
+
+8. Typography & Layout
+Keep the bold typography style but introduce:
+- more cinematic spacing
+- occasional asymmetry
+- refined composition
+- layered text positioning
+- luxury editorial inspiration
+
+Do not make the design feel like a generic template.
+
+9. Preserve Existing Strengths
+Keep and refine:
+- the current hero animation
+- parallax behavior
+- timeline loading effect
+- image zoom interactions
+- elegant minimal layout
+- premium spacing system
+
+Refine them to feel smoother, more intentional, and more cinematic overall.
