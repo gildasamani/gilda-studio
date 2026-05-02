@@ -1,0 +1,97 @@
+1"}
+Create a highly cinematic, visually stunning, award-winning portfolio website for a creative front-end developer and digital studio.
+
+The website should feel like a luxury interactive experience, not a typical portfolio.
+
+STYLE & MOOD:
+- Cinematic
+- Elegant
+- Premium
+- Atmospheric
+- Sophisticated
+- Editorial
+- Boutique creative studio
+- Modern luxury aesthetic
+- Minimal but emotionally powerful
+- Inspired by Awwwards websites, Apple transitions, luxury fashion editorials, cinematic coffee brands, and high-end architecture studios.
+
+COLOR PALETTE:
+- Main background: #1A1512
+- Secondary background: #2A211D
+- Primary text: #F6F0E8
+- Secondary text: #D8C5AE
+- Accent color: #B77B57
+
+VISUAL DIRECTION:
+- Deep espresso dark backgrounds
+- Warm cream typography
+- Copper cinematic glow accents
+- Soft ambient lighting
+- Layered blur effects
+- Glassmorphism cards
+- Smooth gradients
+- Elegant shadows
+- Subtle grain/noise texture
+- Premium spacing and typography
+- Large cinematic typography
+- Luxurious minimal layout
+
+ANIMATIONS & INTERACTIONS:
+- Smooth scrolling using Lenis
+- GSAP animations
+- Framer Motion transitions
+- Mouse-follow spotlight glow
+- Parallax scrolling
+- Reveal-on-scroll animations
+- Magnetic buttons
+- Hover glow effects
+- Smooth fade transitions
+- Floating ambient particles
+- Elegant motion, never excessive
+- Interactive cursor effects
+- Cinematic image transitions
+
+TECH STACK:
+- Next.js
+- Tailwind CSS
+- Framer Motion
+- GSAP
+- Lenis smooth scrolling
+- shadcn/ui
+
+IMPORTANT:
+The website must feel extremely polished, modern, smooth, and premium.
+Avoid generic startup design.
+Avoid overly bright neon colors.
+Avoid cluttered layouts.
+Focus on atmosphere, lighting, motion, and emotional visual experience.
+
+SECTIONS:
+1. Hero section with massive cinematic typography
+2. Interactive featured transformations / redesign showcase
+3. Selected projects grid
+4. About section with elegant layout
+5. Creative process timeline
+6. Services section
+7. Contact CTA section
+
+HERO SECTION:
+Create a stunning hero section with:
+- Animated spotlight following mouse movement
+- Large cinematic headline
+- Layered motion effects
+- Soft floating gradients
+- Elegant animated background
+- Sophisticated motion design
+
+TYPOGRAPHY:
+Use premium modern fonts such as:
+- Satoshi
+- General Sans
+- Clash Display
+- Inter
+
+DESIGN GOAL:
+The website should look like an award-winning luxury digital studio website that immediately impresses visitors emotionally and visually.
+
+The experience should feel immersive, artistic, cinematic, elegant, and unforgettab
