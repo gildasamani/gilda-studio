@@ -1,0 +1,156 @@
+752"}
+Refine the “Reframe Studio” website into a more cinematic, premium, atmospheric, and modern creative frontend studio experience.
+
+The website should feel immersive, elegant, emotional, and highly polished — not like a generic agency template.
+
+Keep the dark luxury aesthetic with deep black backgrounds, warm brown tones, subtle orange glow accents, cinematic grain, and atmospheric lighting.
+
+HERO SECTION:
+- Replace the main hero title with:
+“IMMERSIVE BY DESIGN”
+
+- Keep the existing subtext exactly as it currently is.
+
+- Remove the “Scroll to Explore” text completely.
+
+- Add a very subtle cinematic background video in the hero section:
+A dark atmospheric close-up of latte art coffee with soft steam/smoke movement.
+The footage must be:
+- heavily muted
+- blurred slightly
+- darkened with strong overlays
+- cinematic
+- elegant
+- subtle and slow
+- not distracting
+- not commercial-looking
+
+The typography must remain the main focus while the coffee atmosphere subtly enhances the mood in the background.
+
+Add:
+- soft grain
+- cinematic noise
+- atmospheric blur
+- warm glow bloom
+- layered depth
+
+NAVBAR IMPROVEMENTS:
+The current navbar feels too basic.
+
+Create a premium cinematic navbar with:
+- dark glassmorphism effect
+- blur background
+- soft transparency
+- subtle bottom border
+- smooth transitions on scroll
+- elegant spacing
+- refined typography
+
+Fix the readability issue while scrolling over content.
+
+MENU HOVER EFFECTS:
+Replace the current old-fashioned underline hover animation.
+
+Create a more modern luxury hover interaction:
+- soft glow transition
+- subtle opacity animation
+- cinematic fade effect
+- elegant text movement
+- refined letter spacing transition
+- subtle hover blur/sharpen effect
+
+Keep it minimal and premium.
+Avoid flashy animations.
+
+CURSOR:
+Keep the current custom cursor size.
+DO NOT enlarge the cursor on hover.
+
+Enhance it subtly with:
+- smooth interpolation
+- soft orange glow
+- subtle pulse
+- cinematic trailing
+- atmospheric blur
+
+The cursor should feel elegant and expensive.
+
+PROJECT SECTION DIRECTION:
+The current imagery feels too random and disconnected.
+
+Transform the project sections into curated creative directions and interface concepts rather than fake client projects.
+
+Rename sections with more natural and understandable titles like:
+- Creative Directions
+- Interface Concepts
+- Digital Atmospheres
+
+Avoid terms that feel overly abstract or pretentious.
+
+VISUAL DIRECTION:
+Replace generic abstract visuals with more cinematic and curated imagery:
+- dark modern interiors
+- premium workspace aesthetics
+- moody green plants
+- bird of paradise plants
+- atmospheric desk setups
+- cinematic UI closeups
+- editorial compositions
+- luxury lifestyle details
+- futuristic minimal visuals
+- warm lighting
+- green accents for color balance
+
+The green tones should subtly enrich the palette and add life to the dark environment.
+
+TYPOGRAPHY & LAYOUT:
+Maintain the strong typography style while making the composition feel:
+- more editorial
+- more cinematic
+- less template-like
+- more intentional
+- more immersive
+
+Introduce:
+- refined asymmetry
+- layered typography
+- cinematic spacing
+- sophisticated visual rhythm
+
+MOTION:
+Refine all existing animations:
+- smoother parallax
+- softer reveals
+- elegant transitions
+- atmospheric motion
+- premium easing
+- cinematic interaction pacing
+
+Avoid aggressive or flashy effects.
+
+CONTACT EXPERIENCE:
+Replace the final CTA with a more emotional cinematic section.
+
+Headline:
+“LET’S CREATE SOMETHING UNFORGETTABLE”
+
+Button:
+“Start a Conversation”
+
+Create a premium immersive contact form experience with:
+- Name
+- Email
+- Website URL (Optional)
+- Project Type
+- Estimated Budget
+- Vision / Project Details
+
+The form should feel luxurious, cinematic, modern, and interactive with:
+- glow focus states
+- glassmorphism
+- smooth transitions
+- subtle blur
+- elegant lighting
+
+IMPORTANT:
+The website should feel like a cinematic creative frontend studio experience with personality, atmosphere, emotional depth, and premium visual direction — not a generic portfolio temp
