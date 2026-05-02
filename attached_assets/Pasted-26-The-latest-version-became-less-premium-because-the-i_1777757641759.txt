@@ -1,0 +1,101 @@
+26"}
+The latest version became less premium because the imagery feels too basic and disconnected. Please refine it again with a more high-end, minimal, cinematic direction.
+
+HERO SECTION:
+Remove the hero background coffee image/video completely.
+Return the hero to the previous clean, dark, minimal, typography-focused style.
+Keep the hero simple, elegant, atmospheric, and premium.
+The background should be dark with subtle gradients, soft glow, film grain, and cinematic depth — no visible photo/video background.
+
+Hero title:
+IMMERSIVE BY DESIGN
+
+Keep the current subtext unchanged.
+
+IMAGERY:
+Replace all current images. They feel too basic and not premium enough.
+Avoid generic stock images, random social media logos, plain furniture photos, and obvious lifestyle photos.
+
+Use a more curated high-end visual direction:
+- cinematic dark interiors
+- premium workspaces
+- abstract UI closeups
+- elegant plant details with green accents
+- bird of paradise plant visuals
+- moody lighting
+- glass, shadow, texture, grain
+- minimal architecture
+- luxury editorial compositions
+- sophisticated website/interface mockups
+
+The images should feel expensive, intentional, and connected to a creative frontend studio.
+
+Remove or completely redesign the social media logo image/card. It currently feels cheap and disconnected.
+
+EXPERIENCE SECTION:
+Update the studio/about section to say that the studio has 10+ years of experience in frontend development, UI implementation, WordPress, responsive websites, and digital experience refinement.
+
+AI WEBSITE AUDIT FEATURE:
+Add a premium interactive AI-style website audit section.
+
+The purpose:
+Users can enter their website URL and receive a clear audit-style preview showing how their website can be improved visually and technically.
+
+Section title ideas:
+“AI Website Audit”
+or
+“Analyze Your Website”
+
+This feature should feel like a smart premium tool inside the website.
+
+Include an input field:
+“Enter your website URL”
+
+Button:
+“Analyze Website”
+
+After submission, show a polished audit result card with sample/generated insights such as:
+- Overall Score
+- Visual Design Score
+- Responsive Score
+- SEO Score
+- Performance Score
+- Accessibility Score
+- Conversion Potential
+
+Also show improvement categories:
+- Visual Design Issues
+- Mobile Responsiveness
+- SEO Improvements
+- Speed & Performance
+- User Experience
+- Conversion & Trust
+- Technical Structure
+
+The result should explain that Reframe Studio can help transform the website both visually and technically so it looks more professional, works better across devices, improves trust, and helps attract more customers.
+
+For now, this can be a front-end demo/mock AI audit experience with realistic sample results. It does not need a real backend yet, but it should be built in a way that can later connect to a real API.
+
+DESIGN FOR AI SECTION:
+Make it cinematic and premium:
+- dark glass panel
+- soft orange glow
+- subtle animated loading state
+- score cards
+- elegant progress bars
+- smooth reveal animation
+- clean readable layout
+- premium UI dashboard feeling
+
+Do not make it look like a cheap widget.
+
+NAVBAR:
+Keep the premium glassmorphism navbar.
+Make menu hover effects modern and subtle, not old underline animations.
+
+CONTACT SECTION:
+Keep the contact form, but make the visual style more refined, minimal, and premium.
+
+OVERALL:
+The site should feel like a high-end creative frontend studio, not a generic agency template.
+Make it cleaner, more intentional, more cinematic, and more connected to web design, frontend, and website transformat

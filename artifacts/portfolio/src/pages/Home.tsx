@@ -7,6 +7,7 @@ import { SelectedProjects } from "@/components/SelectedProjects";
 import { About } from "@/components/About";
 import { CreativeProcess } from "@/components/CreativeProcess";
 import { Services } from "@/components/Services";
+import { WebsiteAudit } from "@/components/WebsiteAudit";
 import { Contact } from "@/components/Contact";
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
       <About />
       <CreativeProcess />
       <Services />
+      <WebsiteAudit />
       <Contact />
     </main>
   );
