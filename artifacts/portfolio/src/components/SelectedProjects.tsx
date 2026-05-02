@@ -27,25 +27,29 @@ export function SelectedProjects() {
       title: "Grove",
       category: "Digital Atmosphere",
       desc: "An architectural dialogue between glass and living form — where a single leaf commands the frame.",
+      // Bird of paradise / tropical leaf close-up — no people
       image: "https://images.unsplash.com/photo-1572892022983-b5dea97ef95a?q=80&w=1800&auto=format&fit=crop",
     },
     {
       title: "Helio",
       category: "Interface Concept",
-      desc: "A workspace in perpetual golden hour. Where the light is the product, and everything else is negative space.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1800&auto=format&fit=crop",
+      desc: "A dark workspace in perpetual golden hour — where restraint is the only luxury that matters.",
+      // Minimal dark desk / abstract architecture — no people
+      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1800&auto=format&fit=crop",
     },
     {
       title: "Forma",
       category: "Creative Direction",
       desc: "Dark minimalism — deliberate, editorial, expensive. Architecture as a statement of restraint.",
+      // Abstract dark fluid/paint swirls — no people
       image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1800&auto=format&fit=crop",
     },
     {
       title: "Lumen",
       category: "Digital Atmosphere",
-      desc: "Light diffused through obsidian glass. A mood board for the space between awareness and design.",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1800&auto=format&fit=crop",
+      desc: "Light diffused through obsidian glass — a mood board for the space between awareness and design.",
+      // Abstract dark architecture / lines — no people
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1800&auto=format&fit=crop",
     },
   ];
 
@@ -53,13 +57,13 @@ export function SelectedProjects() {
     <section id="projects" className="py-32 px-6 md:px-12 lg:px-24">
       <div ref={headingRef} className="mb-20 flex flex-col md:flex-row justify-between items-end">
         <div>
-          <span className="text-[10px] uppercase tracking-[0.32em] text-primary/45 block mb-5">Concept Work</span>
+          <span className="text-[10px] uppercase tracking-[0.32em] block mb-5" style={{ color: "rgba(183,123,87,0.6)" }}>Concept Work</span>
           <h2 className="font-display font-medium tracking-tight leading-[0.88]" style={{ fontSize: "clamp(2rem,5vw,4rem)" }}>
             Interface<br />
-            <span style={{ WebkitTextStroke: "1px rgba(246,240,232,0.12)", color: "transparent" }}>Concepts</span>
+            <span style={{ WebkitTextStroke: "1px rgba(246,240,232,0.15)", color: "transparent" }}>Concepts</span>
           </h2>
         </div>
-        <p style={{ color: "rgba(216,197,174,0.45)" }} className="max-w-[240px] text-sm leading-relaxed mt-6 md:mt-0">
+        <p className="max-w-[240px] text-sm leading-relaxed mt-6 md:mt-0" style={{ color: "rgba(216,197,174,0.6)" }}>
           Visual explorations at the intersection of atmosphere and function.
         </p>
       </div>
@@ -78,35 +82,38 @@ export function SelectedProjects() {
               alt={project.title}
               className="w-full h-full object-cover"
               style={{
-                opacity: 0.48,
-                filter: "saturate(0.45) brightness(0.8)",
+                opacity: 0.62,
+                filter: "saturate(0.5) brightness(0.85)",
                 transition: "all 1s cubic-bezier(0.25,1,0.5,1)",
+                transform: "scale(1)",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.opacity = "0.82";
-                e.currentTarget.style.filter = "saturate(0.75) brightness(0.92)";
+                e.currentTarget.style.opacity = "0.88";
+                e.currentTarget.style.filter = "saturate(0.8) brightness(0.98)";
                 e.currentTarget.style.transform = "scale(1.05)";
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.opacity = "0.48";
-                e.currentTarget.style.filter = "saturate(0.45) brightness(0.8)";
+                e.currentTarget.style.opacity = "0.62";
+                e.currentTarget.style.filter = "saturate(0.5) brightness(0.85)";
                 e.currentTarget.style.transform = "scale(1)";
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/96 via-background/25 to-transparent z-10" />
-            <div className="absolute inset-0 rounded-2xl border border-primary/0 group-hover:border-primary/18 z-20 transition-all duration-700" />
+            {/* Softer gradient — not as heavy */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/15 to-transparent z-10" />
+            <div className="absolute inset-0 rounded-2xl border border-primary/0 group-hover:border-primary/22 z-20"
+              style={{ transition: "border-color 0.7s ease" }} />
 
             <div className="absolute bottom-0 left-0 p-7 w-full z-30">
               <span className="text-[10px] uppercase tracking-[0.22em] block mb-2.5 translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
-                style={{ color: "rgba(183,123,87,0.6)" }}>
+                style={{ color: "rgba(183,123,87,0.75)" }}>
                 {project.category}
               </span>
               <h3 className="font-display font-medium text-2xl md:text-[2rem] translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-out"
-                style={{ color: "rgba(246,240,232,0.88)" }}>
+                style={{ color: "rgba(246,240,232,0.92)" }}>
                 {project.title}
               </h3>
               <p className="text-xs mt-2.5 max-w-[240px] leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
-                style={{ color: "rgba(216,197,174,0.5)" }}>
+                style={{ color: "rgba(216,197,174,0.65)" }}>
                 {project.desc}
               </p>
             </div>

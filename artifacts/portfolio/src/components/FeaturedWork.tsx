@@ -40,22 +40,23 @@ export function FeaturedWork() {
       title: "Obsidian",
       category: "Interface Concept",
       year: "2024",
-      desc: "A dark interface born in restraint. Precision UI — where function is the only decoration that remains.",
-      image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2400&auto=format&fit=crop",
+      desc: "Precision UI in the dark — a digital surface born from restraint, where only the essential survives.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2400&auto=format&fit=crop",
     },
   ];
 
   return (
     <section id="work" className="py-36 px-6 md:px-12 lg:px-24">
-      <div ref={headingRef} className="mb-28 flex flex-col md:flex-row justify-between items-end gap-8 pb-12 border-b border-white/[0.04]">
+      <div ref={headingRef} className="mb-28 flex flex-col md:flex-row justify-between items-end gap-8 pb-12"
+        style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
         <div>
-          <span className="text-[10px] uppercase tracking-[0.32em] text-primary/45 block mb-5">Selected Work</span>
+          <span className="text-[10px] uppercase tracking-[0.32em] block mb-5" style={{ color: "rgba(183,123,87,0.6)" }}>Selected Work</span>
           <h2 className="font-display font-medium tracking-tighter leading-[0.85]" style={{ fontSize: "clamp(2.5rem,6vw,5.5rem)" }}>
             Creative<br />
-            <span style={{ WebkitTextStroke: "1px rgba(246,240,232,0.12)", color: "transparent" }}>Directions</span>
+            <span style={{ WebkitTextStroke: "1px rgba(246,240,232,0.15)", color: "transparent" }}>Directions</span>
           </h2>
         </div>
-        <p style={{ color: "rgba(216,197,174,0.45)" }} className="max-w-[260px] text-sm leading-relaxed">
+        <p className="max-w-[260px] text-sm leading-relaxed" style={{ color: "rgba(216,197,174,0.6)" }}>
           Environments, atmospheres, and interface concepts that explore how digital space feels.
         </p>
       </div>
@@ -75,44 +76,46 @@ export function FeaturedWork() {
                 alt={work.title}
                 className="w-full h-full object-cover"
                 style={{
-                  opacity: 0.62,
-                  filter: "saturate(0.55) brightness(0.88)",
+                  opacity: 0.75,
+                  filter: "saturate(0.6) brightness(0.92)",
                   transition: "all 1.2s cubic-bezier(0.25,1,0.5,1)",
+                  transform: "scale(1)",
                 }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.opacity = "0.88";
-                  e.currentTarget.style.filter = "saturate(0.82) brightness(0.95)";
+                  e.currentTarget.style.opacity = "0.92";
+                  e.currentTarget.style.filter = "saturate(0.85) brightness(1)";
                   e.currentTarget.style.transform = "scale(1.04)";
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.opacity = "0.62";
-                  e.currentTarget.style.filter = "saturate(0.55) brightness(0.88)";
+                  e.currentTarget.style.opacity = "0.75";
+                  e.currentTarget.style.filter = "saturate(0.6) brightness(0.92)";
                   e.currentTarget.style.transform = "scale(1)";
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent z-20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/55 via-transparent to-transparent z-20" />
             </div>
 
             <div className="w-full md:w-[42%] flex flex-col justify-center gap-5 py-6">
               <div className="flex items-center gap-3">
-                <span className="w-5 h-px" style={{ background: "rgba(183,123,87,0.45)" }} />
-                <span className="text-[10px] uppercase tracking-[0.24em] font-medium" style={{ color: "rgba(183,123,87,0.55)" }}>{work.category}</span>
+                <span className="w-5 h-px" style={{ background: "rgba(183,123,87,0.55)" }} />
+                <span className="text-[10px] uppercase tracking-[0.24em] font-medium" style={{ color: "rgba(183,123,87,0.7)" }}>{work.category}</span>
               </div>
               <h3
-                className="font-display font-medium tracking-tight"
+                className="font-display font-medium tracking-tight cursor-default"
                 style={{
                   fontSize: "clamp(2.6rem,4.5vw,4.2rem)",
                   lineHeight: "0.9",
-                  color: "rgba(246,240,232,0.9)",
+                  color: "rgba(246,240,232,0.92)",
                   transition: "color 0.6s ease",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.color = "rgba(183,123,87,0.9)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(246,240,232,0.9)")}
+                onMouseEnter={e => (e.currentTarget.style.color = "rgba(183,123,87,0.92)")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(246,240,232,0.92)")}
               >
                 {work.title}
               </h3>
-              <p style={{ color: "rgba(216,197,174,0.45)" }} className="leading-relaxed text-sm max-w-[260px]">{work.desc}</p>
-              <span className="text-[10px] uppercase tracking-[0.22em] mt-3 rounded-full px-4 py-1.5 w-fit border" style={{ color: "rgba(216,197,174,0.25)", borderColor: "rgba(255,255,255,0.06)" }}>{work.year}</span>
+              <p className="leading-relaxed text-sm max-w-[260px]" style={{ color: "rgba(216,197,174,0.6)" }}>{work.desc}</p>
+              <span className="text-[10px] uppercase tracking-[0.22em] mt-3 rounded-full px-4 py-1.5 w-fit border"
+                style={{ color: "rgba(216,197,174,0.35)", borderColor: "rgba(255,255,255,0.08)" }}>{work.year}</span>
             </div>
           </div>
         ))}

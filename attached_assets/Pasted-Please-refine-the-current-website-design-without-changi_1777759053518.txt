@@ -1,0 +1,32 @@
+Please refine the current website design without changing the overall cinematic dark luxury style.
+
+Important changes:
+- Reduce the background grain/noise effect significantly. It can still exist, but it should be very subtle and elegant, not covering the whole website or distracting from the content.
+- Remove or reduce the heavy dark overlay that seems to sit on top of all elements. The website currently feels too dim and low-contrast.
+- Improve readability across the entire website, especially in the Website Audit section.
+- Do not use any images of people, hands, faces, or human body parts anywhere on the website.
+- Keep the top section elegant and minimal. Do not add random background photos behind the hero area.
+- Replace all generic/simple stock-looking images with more premium, abstract, cinematic, architectural, interface, or luxury-detail visuals.
+- The social media/interface section should look much more premium and less basic.
+
+Website Audit section:
+- Rename “AI Website Audit” to “Website Audit” or “Website Health Check”. Avoid using the word “AI” in the title.
+- Make this section more visually prominent and attractive because it should encourage users to request a redesign.
+- Increase contrast in the audit card. The input field, button, labels, and result boxes should be easier to see before the user enters a website.
+- Make the “Analyze Website” button more eye-catching and clickable.
+- Add persuasive audit categories such as:
+  1. Visual Design Score
+  2. SEO & Performance
+  3. Mobile Responsiveness
+  4. User Experience
+  5. Conversion Potential
+  6. Trust & Credibility
+- After the user enters a URL, show a mock audit result with a score, problems, and improvement suggestions.
+- Add a clear CTA after the audit result, such as:
+  “Your website could perform better. Let’s redesign it into a high-converting, modern experience.”
+  Button: “Request a Redesign”
+
+Content update:
+- Change experience text to “10+ years of experience”.
+- Keep the overall style dark, cinematic, premium, minimal, and high-end.
+- Use warm bronze/copper accents carefully, but make important CTAs more visible.
