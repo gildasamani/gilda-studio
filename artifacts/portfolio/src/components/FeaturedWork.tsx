@@ -26,22 +26,22 @@ export function FeaturedWork() {
       title: "Meridian",
       category: "Creative Direction",
       year: "2025",
-      desc: "Warm geometry dissolved in deep shadow. An interior that breathes — where architecture becomes atmosphere.",
-      image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=2400&auto=format&fit=crop",
+      desc: "A premium digital presence built from restraint — where editorial typography meets architectural precision.",
+      image: "/images/meridian.png",
     },
     {
       title: "Canopy",
       category: "Digital Atmosphere",
       year: "2024",
-      desc: "The bird of paradise held still — a study in sculptural form, green tension, and editorial negative space.",
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=2400&auto=format&fit=crop",
+      desc: "Light dissolves into obsidian — a study in ambient warmth, negative space, and cinematic digital mood.",
+      image: "/images/canopy.png",
     },
     {
       title: "Obsidian",
       category: "Interface Concept",
       year: "2024",
-      desc: "Precision UI in the dark — a digital surface born from restraint, where only the essential survives.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2400&auto=format&fit=crop",
+      desc: "Precision UI in the dark — a layered digital surface born from restraint, where only the essential survives.",
+      image: "/images/obsidian.png",
     },
   ];
 

@@ -26,30 +26,26 @@ export function SelectedProjects() {
     {
       title: "Grove",
       category: "Digital Atmosphere",
-      desc: "An architectural dialogue between glass and living form — where a single leaf commands the frame.",
-      // Bird of paradise / tropical leaf close-up — no people
-      image: "https://images.unsplash.com/photo-1572892022983-b5dea97ef95a?q=80&w=1800&auto=format&fit=crop",
+      desc: "Concrete, light, and the geometry of shadow — architecture as pure cinematic editorial.",
+      image: "/images/grove.png",
     },
     {
       title: "Helio",
       category: "Interface Concept",
-      desc: "A dark workspace in perpetual golden hour — where restraint is the only luxury that matters.",
-      // Minimal dark desk / abstract architecture — no people
-      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1800&auto=format&fit=crop",
+      desc: "A dark editorial interface in perpetual golden hour — where restraint is the only luxury that matters.",
+      image: "/images/helio.png",
     },
     {
       title: "Forma",
       category: "Creative Direction",
-      desc: "Dark minimalism — deliberate, editorial, expensive. Architecture as a statement of restraint.",
-      // Abstract dark fluid/paint swirls — no people
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1800&auto=format&fit=crop",
+      desc: "Grid systems and copper rule lines — deliberate, editorial, expensive. Layout as a statement of restraint.",
+      image: "/images/forma.png",
     },
     {
       title: "Lumen",
       category: "Digital Atmosphere",
-      desc: "Light diffused through obsidian glass — a mood board for the space between awareness and design.",
-      // Abstract dark architecture / lines — no people
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1800&auto=format&fit=crop",
+      desc: "Amber light refracted through dark glass — a cinematic study in warmth, depth, and negative space.",
+      image: "/images/lumen.png",
     },
   ];
 

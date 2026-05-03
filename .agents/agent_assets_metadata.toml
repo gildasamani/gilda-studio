@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "CpHSOrVgOYsLpHDPV2Muh"
+uri = "file://artifacts/portfolio/public/images/meridian.png"
+type = "image"
+title = "meridian creative direction"
+
+[[generated]]
+id = "zXuk1ZoxUYDBoXySa7JoK"
+uri = "file://artifacts/portfolio/public/images/canopy.png"
+type = "image"
+title = "canopy digital atmosphere"
+
+[[generated]]
+id = "-aDRuJVDLMQzJuQ8RZm25"
+uri = "file://artifacts/portfolio/public/images/obsidian.png"
+type = "image"
+title = "obsidian interface concept"
+
+[[generated]]
+id = "hB3HJtZVqOP38XVwTw5D6"
+uri = "file://artifacts/portfolio/public/images/grove.png"
+type = "image"
+title = "grove architectural atmosphere"
+
+[[generated]]
+id = "FIgE2nROau9pN-UQKH9gf"
+uri = "file://artifacts/portfolio/public/images/helio.png"
+type = "image"
+title = "helio interface editorial no people"
+
+[[generated]]
+id = "i20_cukIc56bcJbD8pNn8"
+uri = "file://artifacts/portfolio/public/images/forma.png"
+type = "image"
+title = "forma creative direction"
+
+[[generated]]
+id = "-_6MWoznBXAFNVQTypEWw"
+uri = "file://artifacts/portfolio/public/images/lumen.png"
+type = "image"
+title = "lumen light atmosphere"
