@@ -472,13 +472,6 @@ export function WebsiteAudit() {
                     </svg>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: "rgba(255,255,255,0.14)" }} />
                   </button>
-                  <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                    className="flex items-center gap-3 px-10 py-4 rounded-full text-sm font-medium uppercase tracking-[0.16em] border transition-all duration-400"
-                    style={{ borderColor: "rgba(183,123,87,0.38)", color: "rgba(183,123,87,0.88)" }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(183,123,87,0.7)"; (e.currentTarget as HTMLButtonElement).style.color = C.accent; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(183,123,87,0.38)"; (e.currentTarget as HTMLButtonElement).style.color = "rgba(183,123,87,0.88)"; }}>
-                    Book a Strategy Call
-                  </button>
                 </div>
               </div>
             </div>

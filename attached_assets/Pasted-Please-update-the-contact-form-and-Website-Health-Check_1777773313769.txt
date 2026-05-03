@@ -1,0 +1,63 @@
+Please update the contact form and Website Health Check CTA behavior.
+
+CONTACT FORM FUNCTIONALITY:
+- When a user submits the contact/request form, all form details should be sent to:
+gilda.samani@gmail.com
+
+- After the user submits the form successfully, automatically send a confirmation email to the user.
+
+Confirmation email message:
+“Thank you for your request. We have received your submission and will review it shortly. After reviewing your request, we will contact you by email or phone.”
+
+FORM SUCCESS MESSAGE ON WEBSITE:
+After submission, show a clear success message:
+“Thank you! Your request has been submitted successfully. We will contact you by email or phone after reviewing your request.”
+
+EMAIL DESIGN:
+The automatic confirmation email sent to the user should have a premium branded design consistent with the GILDA STUDIO website aesthetic.
+
+Email style requirements:
+- Dark cinematic luxury design
+- Minimal premium layout
+- Elegant typography
+- Subtle bronze/copper accent colors
+- Soft gradients or glow accents
+- Clean spacing
+- Modern button styling
+- Professional but warm tone
+
+The email should feel like a luxury creative studio brand experience, not a generic automated email.
+
+Include:
+- GILDA STUDIO logo or branded header
+- Short thank you message
+- Confirmation that the request was received
+- Mention that we will contact them via email or phone after review
+- Elegant footer styling
+
+BUDGET DROPDOWN:
+Update the budget range dropdown options to start from $800 and above.
+
+Use options like:
+- $800 – $1,500
+- $1,500 – $3,000
+- $3,000 – $5,000
+- $5,000 – $8,000
+- $8,000+
+
+WEBSITE HEALTH CHECK SECTION:
+After the website analysis result, show only ONE CTA button.
+
+Remove:
+- “Book a Strategy Call”
+
+Keep only:
+- “Request a Redesign”
+
+Button behavior:
+- The “Request a Redesign” button should smoothly scroll or link directly to the contact/request form section.
+
+IMPORTANT:
+- Make sure the form fields, dropdowns, placeholders, and buttons have stronger contrast and are easier to read.
+- Increase readability of all form labels and helper text.
+- Keep the design premium, cinematic, minimal, and fully consistent with the GILDA STUDIO branding.
