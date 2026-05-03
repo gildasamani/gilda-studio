@@ -1,0 +1,146 @@
+Refine and improve the current website experience while keeping the same cinematic luxury aesthetic.
+
+IMPORTANT:
+Do NOT make the Website Health Check section too long, overwhelming, or exhausting for users.
+The experience should feel premium, smart, emotional, and concise.
+Keep the audit visually impressive but focused and easy to scan.
+
+GENERAL DESIGN IMPROVEMENTS:
+- Reduce the remaining heavy grain/noise effect even more. Keep it subtle and elegant.
+- Reduce dark overlays that make elements hard to read.
+- Improve overall readability and contrast across the website.
+- Make important text clearer and easier to read.
+- Keep the premium cinematic dark aesthetic with bronze/copper accents.
+- Do not use any images of people, hands, faces, or body parts.
+- Replace generic visuals with premium abstract, architectural, interface, or cinematic visuals.
+
+FORMS & INPUTS:
+Improve contrast and readability for ALL forms:
+- Website Health Check form
+- Contact / Request form
+
+Currently many texts and placeholders are too faded.
+
+Requirements:
+- Increase text contrast
+- Make labels clearer
+- Make placeholders easier to read
+- Improve input field visibility
+- Make form borders more visible
+- Improve focus states
+- Increase button visibility
+- Ensure forms still feel premium and elegant, not harsh
+
+WEBSITE HEALTH CHECK SECTION:
+Keep this section visually important and persuasive, but not too long.
+
+The structure should be:
+
+1. URL Input
+2. Analyze Animation
+3. Overall Score
+4. Key Findings
+5. Before / After Preview
+6. Recommendations
+7. Final CTA
+
+Do not generate an excessively long dashboard.
+
+ANALYZE EXPERIENCE:
+When the user clicks Analyze:
+Show elegant animated loading states:
+- Scanning Website Structure...
+- Evaluating User Experience...
+- Measuring Visual Hierarchy...
+- Detecting Conversion Issues...
+
+Use subtle cinematic motion and glow effects.
+
+RESULTS SECTION:
+Keep results concise and visually premium.
+
+Include:
+- Overall Website Score
+- First Impression Score
+- Mobile Experience
+- Conversion Potential
+- Brand Trust Level
+
+Use elegant cards with short explanations only.
+
+Avoid long paragraphs.
+
+CONVERSION & REDESIGN PSYCHOLOGY:
+The experience should emotionally make users feel:
+- their website looks outdated
+- competitors feel more modern
+- their business has untapped potential
+- redesign can improve trust and conversions
+
+Add a concise section:
+“Why Visitors Leave”
+
+Examples:
+- Weak first impression
+- Confusing layout
+- Low emotional engagement
+- Poor mobile experience
+- Weak CTA visibility
+
+BEFORE / AFTER SECTION:
+This section is extremely important.
+
+Requirements:
+- Make it larger and more visually impactful
+- Use the user’s actual website screenshot as the “Before”
+- The “After” version should feel like a premium upgraded redesign of the SAME website
+- Do NOT create a completely different random website
+- Preserve the original structure and identity while improving:
+  - typography
+  - spacing
+  - hierarchy
+  - branding
+  - layout
+  - CTA visibility
+  - premium feel
+
+Add elegant improvement indicators such as:
++ Better hierarchy
++ Improved trust
++ Premium branding
++ Better mobile experience
++ Higher conversion potential
+
+Make the transformation feel dramatic but believable.
+
+VISUAL EFFECT:
+After Analyze:
+- briefly darken the interface
+- show subtle scan-line effects
+- reveal the redesign preview with cinematic transitions
+
+FINAL CTA:
+Redesign the final CTA section to feel more cinematic and emotionally impactful.
+
+Use:
+- larger typography
+- cleaner spacing
+- premium motion
+- stronger hierarchy
+- subtle glowing accents
+
+The CTA should feel like the climax of the experience.
+
+Headline:
+“Transform Your Website Into A Premium Digital Experience”
+
+Subheadline:
+“Your website should do more than exist — it should attract, impress, and convert.”
+
+Buttons:
+- Request a Redesign
+- Book a Strategy Call
+
+IMPORTANT:
+Do NOT make this feel like a technical SEO dashboard or a cheap AI tool.
+It should feel like a premium luxury digital agency experience.
