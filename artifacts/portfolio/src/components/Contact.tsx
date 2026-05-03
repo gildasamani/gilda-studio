@@ -289,11 +289,12 @@ export function Contact() {
                 <Field label="Estimated Budget">
                   <select required value={form.budget} onChange={set("budget")} style={selectStyle} {...focus}>
                     <option value="" disabled style={optStyle}>Investment range</option>
-                    <option value="$800 – $1,500" style={optStyle}>$800 – $1,500</option>
-                    <option value="$1,500 – $3,000" style={optStyle}>$1,500 – $3,000</option>
-                    <option value="$3,000 – $5,000" style={optStyle}>$3,000 – $5,000</option>
-                    <option value="$5,000 – $8,000" style={optStyle}>$5,000 – $8,000</option>
-                    <option value="$8,000+" style={optStyle}>$8,000+</option>
+                    <option value="$1,000 – $3,000" style={optStyle}>$1,000 – $3,000</option>
+                    <option value="$3,000 – $6,000" style={optStyle}>$3,000 – $6,000</option>
+                    <option value="$6,000 – $10,000" style={optStyle}>$6,000 – $10,000</option>
+                    <option value="$10,000 – $15,000" style={optStyle}>$10,000 – $15,000</option>
+                    <option value="$15,000 – $30,000" style={optStyle}>$15,000 – $30,000</option>
+                    <option value="$30,000+" style={optStyle}>$30,000+</option>
                   </select>
                 </Field>
               </div>
