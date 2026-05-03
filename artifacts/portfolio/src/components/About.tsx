@@ -1,10 +1,15 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export function About() {
+  const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const glassPanelRef = useRef<HTMLDivElement>(null);
+  const bgGlowRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<(HTMLDivElement | null)[]>([]);
 
+  // One-time reveal animations (unchanged)
   useEffect(() => {
     gsap.fromTo(contentRef.current,
       { y: 50, opacity: 0, filter: "blur(4px)" },
@@ -22,6 +27,50 @@ export function About() {
     });
   }, []);
 
+  // Continuous scroll effects — active on both scroll directions
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const st: ScrollTrigger[] = [];
+
+    const fullRange = {
+      trigger: sectionRef.current,
+      start: "top bottom",
+      end: "bottom top",
+    };
+
+    // Background glow drifts upward through section
+    const t1 = gsap.to(bgGlowRef.current, {
+      y: -60,
+      ease: "none",
+      scrollTrigger: { ...fullRange, scrub: 2 },
+    });
+    if (t1.scrollTrigger) st.push(t1.scrollTrigger);
+
+    // Glass panel moves at slightly different rate — creates depth vs the text column
+    const t2 = gsap.to(glassPanelRef.current, {
+      y: -18,
+      ease: "none",
+      scrollTrigger: { ...fullRange, scrub: 2.8 },
+    });
+    if (t2.scrollTrigger) st.push(t2.scrollTrigger);
+
+    // Section glow bloom as it scrolls into view then fades
+    const glowTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 75%",
+        end: "bottom 30%",
+        scrub: 2.5,
+      },
+    });
+    glowTl
+      .to(bgGlowRef.current, { opacity: 1, ease: "none", duration: 0.4 })
+      .to(bgGlowRef.current, { opacity: 0.15, ease: "none", duration: 0.6 });
+    if (glowTl.scrollTrigger) st.push(glowTl.scrollTrigger);
+
+    return () => st.forEach(t => t.kill());
+  }, []);
+
   const stats = [
     ["10+", "Years Building"],
     ["200+", "Sites Delivered"],
@@ -35,12 +84,21 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-36 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 80% 55% at 50% 50%, rgba(183,123,87,0.04), transparent)"
+    <section ref={sectionRef} id="about" className="py-36 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+      {/* Scroll-reactive atmospheric background glow */}
+      <div ref={bgGlowRef} className="absolute pointer-events-none z-0" style={{
+        top: "20%",
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "800px",
+        height: "500px",
+        background: "radial-gradient(ellipse 80% 55% at 50% 50%, rgba(183,123,87,0.06), transparent)",
+        filter: "blur(70px)",
+        opacity: 0,
+        willChange: "transform, opacity",
       }} />
 
-      <div className="max-w-6xl mx-auto" ref={contentRef}>
+      <div className="max-w-6xl mx-auto relative z-10" ref={contentRef}>
         <span className="text-[10px] uppercase tracking-[0.32em] text-primary/45 block mb-8">The Studio</span>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
@@ -70,11 +128,17 @@ export function About() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-8 md:p-10 border" style={{
-            background: "rgba(42,33,29,0.28)",
-            backdropFilter: "blur(16px)",
-            borderColor: "rgba(255,255,255,0.05)",
-          }}>
+          {/* Glass panel — scroll parallax at different rate for depth */}
+          <div
+            ref={glassPanelRef}
+            className="rounded-2xl p-8 md:p-10 border"
+            style={{
+              background: "rgba(42,33,29,0.28)",
+              backdropFilter: "blur(16px)",
+              borderColor: "rgba(255,255,255,0.05)",
+              willChange: "transform",
+            }}
+          >
             <h3 className="text-[10px] uppercase tracking-[0.24em] mb-8" style={{ color: "rgba(183,123,87,0.6)" }}>Our Principles</h3>
             <ul className="space-y-7">
               {principles.map(([num, title, desc]) => (
@@ -86,7 +150,6 @@ export function About() {
               ))}
             </ul>
 
-            {/* Skills tags */}
             <div className="mt-8 pt-7" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
               <span className="text-[10px] uppercase tracking-[0.24em] block mb-4" style={{ color: "rgba(183,123,87,0.4)" }}>Expertise</span>
               <div className="flex flex-wrap gap-2">

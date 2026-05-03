@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export function Hero() {
+  const heroSectionRef = useRef<HTMLElement>(null);
+  const heroContentRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const taglineRef = useRef<HTMLSpanElement>(null);
   const orbRef = useRef<HTMLDivElement>(null);
+  const orb2Ref = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
 
+  // One-time entrance + continuous mouse interactions
   useEffect(() => {
     const titleChars = titleRef.current?.querySelectorAll(".char");
     const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
@@ -49,11 +54,50 @@ export function Hero() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Continuous scroll parallax — responds both ways (down and back up)
+  useEffect(() => {
+    if (!heroSectionRef.current) return;
+    const st: ScrollTrigger[] = [];
+
+    const exitRange = {
+      trigger: heroSectionRef.current,
+      start: "top top",
+      end: "bottom top",
+    };
+
+    // Content block drifts down relative to scroll (classic parallax — feels like floating)
+    const t1 = gsap.to(heroContentRef.current, {
+      y: 70,
+      ease: "none",
+      scrollTrigger: { ...exitRange, scrub: 1.6 },
+    });
+    if (t1.scrollTrigger) st.push(t1.scrollTrigger);
+
+    // Secondary orb drifts upward faster (creates layer separation / depth)
+    const t2 = gsap.to(orb2Ref.current, {
+      y: -90,
+      opacity: 0,
+      ease: "none",
+      scrollTrigger: { ...exitRange, scrub: 2.4 },
+    });
+    if (t2.scrollTrigger) st.push(t2.scrollTrigger);
+
+    // Tagline floats slightly less than content (subtle parallax layer)
+    const t3 = gsap.to(taglineRef.current, {
+      y: -14,
+      ease: "none",
+      scrollTrigger: { ...exitRange, scrub: 2.8 },
+    });
+    if (t3.scrollTrigger) st.push(t3.scrollTrigger);
+
+    return () => st.forEach(t => t.kill());
+  }, []);
+
   const line1 = "IMMERSIVE".split("");
   const line2 = "BY DESIGN".split("");
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section ref={heroSectionRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Deep layered dark atmosphere */}
       <div className="absolute inset-0 z-0" style={{
         background: "radial-gradient(ellipse 90% 70% at 50% 40%, #241c17 0%, #1A1512 55%, #0f0c0a 100%)"
@@ -66,15 +110,17 @@ export function Hero() {
         background: "radial-gradient(circle, rgba(183,123,87,0.11) 0%, rgba(183,123,87,0.03) 50%, transparent 72%)",
         filter: "blur(70px)",
         animation: "floatOrb 18s ease-in-out infinite",
+        willChange: "transform",
       }} />
 
-      {/* Secondary cool-dark orb */}
-      <div className="absolute pointer-events-none z-0" style={{
+      {/* Secondary atmospheric orb — scroll parallax */}
+      <div ref={orb2Ref} className="absolute pointer-events-none z-0" style={{
         bottom: "15%", right: "20%",
         width: "500px", height: "500px",
         background: "radial-gradient(circle, rgba(42,33,29,0.7) 0%, transparent 70%)",
         filter: "blur(90px)",
         animation: "floatOrb 24s ease-in-out infinite reverse",
+        willChange: "transform, opacity",
       }} />
 
       {/* Diagonal vignette */}
@@ -82,18 +128,18 @@ export function Hero() {
         background: "linear-gradient(135deg, rgba(10,8,6,0.6) 0%, transparent 40%, transparent 60%, rgba(10,8,6,0.5) 100%)"
       }} />
 
-      {/* Mouse glow */}
+      {/* Mouse glow — always active */}
       <div className="absolute inset-0 pointer-events-none z-[1]" style={{
         background: `radial-gradient(circle 700px at ${mousePos.x}% ${mousePos.y}%, rgba(183,123,87,0.08), transparent 70%)`,
         transition: "background 0.1s ease",
       }} />
 
-      {/* Hero content */}
-      <div className="relative z-10 text-center px-6 mt-16 select-none">
+      {/* Hero content — scroll parallax wrapper */}
+      <div ref={heroContentRef} className="relative z-10 text-center px-6 mt-16 select-none" style={{ willChange: "transform" }}>
         <span
           ref={taglineRef}
           className="block text-[10px] md:text-[11px] uppercase text-primary/50 mb-10 font-medium"
-          style={{ letterSpacing: "0.3em" }}
+          style={{ letterSpacing: "0.3em", willChange: "transform" }}
         >
           Gilda Studio — Creative Digital Experience
         </span>
@@ -101,7 +147,7 @@ export function Hero() {
         <h1
           ref={titleRef}
           className="font-display font-medium tracking-tighter leading-[0.82] text-foreground"
-          style={{ fontSize: "clamp(3.8rem, 11.5vw, 12rem)", perspective: "1400px" }}
+          style={{ fontSize: "clamp(3.8rem, 11.5vw, 12rem)", perspective: "1400px", willChange: "transform" }}
         >
           <span className="block">
             {line1.map((char, i) => (

@@ -1,10 +1,15 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export function SelectedProjects() {
+  const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const imgWrapRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const glowRef = useRef<HTMLDivElement>(null);
 
+  // One-time reveal animations (unchanged)
   useEffect(() => {
     gsap.fromTo(headingRef.current,
       { y: 40, opacity: 0 },
@@ -20,6 +25,50 @@ export function SelectedProjects() {
           delay: (i % 2) * 0.13 }
       );
     });
+  }, []);
+
+  // Continuous scroll effects — respond on scroll up and down
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const st: ScrollTrigger[] = [];
+
+    // Section atmospheric glow — rises and fades through section scroll
+    const glowTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "bottom 25%",
+        scrub: 2.5,
+      },
+    });
+    glowTl
+      .to(glowRef.current, { opacity: 1, y: "-10%", ease: "none", duration: 0.4 })
+      .to(glowRef.current, { opacity: 0, y: "-25%", ease: "none", duration: 0.6 });
+    if (glowTl.scrollTrigger) st.push(glowTl.scrollTrigger);
+
+    // Per-image parallax — staggered depth per grid position
+    imgWrapRefs.current.forEach((wrap, i) => {
+      if (!wrap) return;
+      const trigger = itemsRef.current[i];
+      if (!trigger) return;
+
+      // Alternate slight variation for visual depth across the grid
+      const yShift = i % 2 === 0 ? -24 : -18;
+
+      const t = gsap.to(wrap, {
+        y: yShift,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.4 + (i % 2) * 0.3,
+        },
+      });
+      if (t.scrollTrigger) st.push(t.scrollTrigger);
+    });
+
+    return () => st.forEach(t => t.kill());
   }, []);
 
   const projects = [
@@ -50,8 +99,22 @@ export function SelectedProjects() {
   ];
 
   return (
-    <section id="projects" className="py-32 px-6 md:px-12 lg:px-24">
-      <div ref={headingRef} className="mb-20 flex flex-col md:flex-row justify-between items-end">
+    <section ref={sectionRef} id="projects" className="py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+
+      {/* Atmospheric glow — continuously scroll-reactive */}
+      <div ref={glowRef} className="absolute pointer-events-none z-0" style={{
+        top: "35%",
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "700px",
+        height: "400px",
+        background: "radial-gradient(ellipse, rgba(183,123,87,0.055) 0%, transparent 68%)",
+        filter: "blur(70px)",
+        opacity: 0,
+        willChange: "transform, opacity",
+      }} />
+
+      <div ref={headingRef} className="mb-20 flex flex-col md:flex-row justify-between items-end relative z-10">
         <div>
           <span className="text-[10px] uppercase tracking-[0.32em] block mb-5" style={{ color: "rgba(183,123,87,0.6)" }}>Concept Work</span>
           <h2 className="font-display font-medium tracking-tight leading-[0.88]" style={{ fontSize: "clamp(2rem,5vw,4rem)" }}>
@@ -64,7 +127,7 @@ export function SelectedProjects() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
         {projects.map((project, i) => (
           <div
             key={i}
@@ -73,28 +136,42 @@ export function SelectedProjects() {
             style={{ aspectRatio: "4/3" }}
             data-cursor="hover"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
+            {/* Parallax image wrapper — extends slightly for movement room */}
+            <div
+              ref={el => { imgWrapRefs.current[i] = el; }}
               style={{
-                opacity: 0.62,
-                filter: "saturate(0.5) brightness(0.85)",
-                transition: "all 1s cubic-bezier(0.25,1,0.5,1)",
-                transform: "scale(1)",
+                position: "absolute",
+                top: "-8%",
+                bottom: "-8%",
+                left: 0,
+                right: 0,
+                willChange: "transform",
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.opacity = "0.88";
-                e.currentTarget.style.filter = "saturate(0.8) brightness(0.98)";
-                e.currentTarget.style.transform = "scale(1.05)";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.opacity = "0.62";
-                e.currentTarget.style.filter = "saturate(0.5) brightness(0.85)";
-                e.currentTarget.style.transform = "scale(1)";
-              }}
-            />
-            {/* Softer gradient — not as heavy */}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+                style={{
+                  opacity: 0.62,
+                  filter: "saturate(0.5) brightness(0.85)",
+                  transition: "opacity 1s cubic-bezier(0.25,1,0.5,1), filter 1s cubic-bezier(0.25,1,0.5,1), transform 1s cubic-bezier(0.25,1,0.5,1)",
+                  transform: "scale(1)",
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.opacity = "0.88";
+                  e.currentTarget.style.filter = "saturate(0.8) brightness(0.98)";
+                  e.currentTarget.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.opacity = "0.62";
+                  e.currentTarget.style.filter = "saturate(0.5) brightness(0.85)";
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              />
+            </div>
+
+            {/* Gradient + border overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/15 to-transparent z-10" />
             <div className="absolute inset-0 rounded-2xl border border-primary/0 group-hover:border-primary/22 z-20"
               style={{ transition: "border-color 0.7s ease" }} />
