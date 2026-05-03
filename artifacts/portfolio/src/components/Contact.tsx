@@ -4,6 +4,7 @@ import gsap from "gsap";
 type FormState = {
   name: string;
   email: string;
+  phone: string;
   website: string;
   projectType: string;
   budget: string;
@@ -12,7 +13,7 @@ type FormState = {
 };
 
 const EMPTY: FormState = {
-  name: "", email: "", website: "", projectType: "", budget: "", message: "", _honey: "",
+  name: "", email: "", phone: "", website: "", projectType: "", budget: "", message: "", _honey: "",
 };
 
 const C = {
@@ -253,6 +254,15 @@ export function Contact() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                <Field label={<>Phone / WhatsApp <span style={{ color: "rgba(216,197,174,0.38)", fontSize: 9, textTransform: "none", letterSpacing: 0 }}>(optional)</span></>}>
+                  <input
+                    type="tel" value={form.phone} onChange={set("phone")}
+                    placeholder="+1 (555) 000-0000"
+                    style={base}
+                    className="placeholder-[rgba(216,197,174,0.38)]"
+                    {...focus}
+                  />
+                </Field>
                 <Field label={<>Website <span style={{ color: "rgba(216,197,174,0.38)", fontSize: 9, textTransform: "none", letterSpacing: 0 }}>(optional)</span></>}>
                   <input
                     type="url" value={form.website} onChange={set("website")}
@@ -262,6 +272,9 @@ export function Contact() {
                     {...focus}
                   />
                 </Field>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <Field label="Project Type">
                   <select required value={form.projectType} onChange={set("projectType")} style={selectStyle} {...focus}>
                     <option value="" disabled style={optStyle}>Select a direction</option>
@@ -273,9 +286,6 @@ export function Contact() {
                     <option value="Something Else" style={optStyle}>Something Else</option>
                   </select>
                 </Field>
-              </div>
-
-              <div className="mb-5">
                 <Field label="Estimated Budget">
                   <select required value={form.budget} onChange={set("budget")} style={selectStyle} {...focus}>
                     <option value="" disabled style={optStyle}>Investment range</option>

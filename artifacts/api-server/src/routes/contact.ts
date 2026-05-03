@@ -96,6 +96,7 @@ function notificationHtml(data: {
         <table width="100%" cellpadding="0" cellspacing="0">
           ${row("Name", data.name)}
           ${row("Email", `<a href="mailto:${data.email}" style="color:#b77b57;text-decoration:none;">${data.email}</a>`)}
+          ${row("Phone", data.phone ? `<a href="tel:${data.phone}" style="color:#b77b57;text-decoration:none;">${data.phone}</a>` : "")}
           ${row("Website", data.website ? `<a href="${data.website}" style="color:#b77b57;text-decoration:none;">${data.website}</a>` : "")}
           ${row("Project Type", data.projectType)}
           ${row("Budget", data.budget)}
@@ -113,10 +114,10 @@ function notificationHtml(data: {
 
 router.post("/contact", limiter, async (req, res) => {
   const {
-    name, email, website = "", projectType, budget, message,
+    name, email, phone = "", website = "", projectType, budget, message,
     _honey = "",
   } = req.body as {
-    name?: string; email?: string; website?: string;
+    name?: string; email?: string; phone?: string; website?: string;
     projectType?: string; budget?: string; message?: string;
     _honey?: string;
   };
@@ -161,6 +162,7 @@ router.post("/contact", limiter, async (req, res) => {
         html: notificationHtml({
           name: name.trim(),
           email: email.trim(),
+          phone: phone.trim(),
           website: website.trim(),
           projectType: projectType.trim(),
           budget: budget.trim(),
