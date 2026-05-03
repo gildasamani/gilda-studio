@@ -168,7 +168,7 @@ export function WebsiteAudit() {
                 <span className="w-3 h-3 rounded-full" style={{ background: "rgba(183,123,87,0.5)" }} />
               </div>
               <span className="text-[10px] uppercase tracking-[0.22em]" style={{ color: C.muted }}>
-                Reframe Studio — Website Analyser
+                Gilda Studio — Website Analyser
               </span>
             </div>
             <div className="p-7">

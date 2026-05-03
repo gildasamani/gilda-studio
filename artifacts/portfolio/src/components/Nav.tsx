@@ -40,7 +40,8 @@ export function Nav() {
         className="text-lg md:text-xl font-display font-medium tracking-tight text-foreground/90 hover:text-primary transition-all duration-500"
         data-testid="nav-logo"
       >
-        REFRAME<span className="text-primary">.</span>
+        <span style={{ letterSpacing: "0.16em", fontWeight: 500 }}>GILDA</span>
+        <span className="text-primary" style={{ letterSpacing: "0.16em" }}>.</span>
       </button>
 
       <div className="hidden md:flex items-center gap-10">

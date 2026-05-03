@@ -180,7 +180,7 @@ export function Contact() {
         )}
 
         <div className="mt-24 pt-8 flex flex-col md:flex-row justify-between items-center" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span className="text-[10px] uppercase tracking-[0.22em]" style={{ color: "rgba(216,197,174,0.38)" }}>© 2025 Reframe Studio</span>
+          <span className="text-[10px] uppercase tracking-[0.22em]" style={{ color: "rgba(216,197,174,0.38)" }}>© 2025 Gilda Studio</span>
           <div className="flex gap-8 mt-4 md:mt-0">
             {["Twitter", "Instagram", "Dribbble"].map(s => (
               <a key={s} href="#" className="text-[10px] uppercase tracking-[0.18em] transition-colors duration-300"

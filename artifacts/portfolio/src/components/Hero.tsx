@@ -95,7 +95,7 @@ export function Hero() {
           className="block text-[10px] md:text-[11px] uppercase text-primary/50 mb-10 font-medium"
           style={{ letterSpacing: "0.3em" }}
         >
-          Reframe Studio — Creative Digital Experience
+          Gilda Studio — Creative Digital Experience
         </span>
 
         <h1

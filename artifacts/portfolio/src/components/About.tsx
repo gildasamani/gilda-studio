@@ -46,7 +46,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
           <div>
             <h2 className="font-display font-medium tracking-tight mb-10 leading-[0.88]" style={{ fontSize: "clamp(2.5rem,5vw,4.5rem)" }}>
-              Reframe<br />
+              Gilda<br />
               <span style={{ WebkitTextStroke: "1px rgba(246,240,232,0.2)", color: "transparent" }}>Studio</span>
             </h2>
 
